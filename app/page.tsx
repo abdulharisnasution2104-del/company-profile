@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Sprout,
@@ -51,17 +52,16 @@ export default function Home() {
               HD TANI
             </div>
             <nav className="hidden lg:flex items-center gap-8 font-medium text-sm text-zinc-300">
-              <a href="#" className="hover:text-emerald-500 transition">Produk</a>
-              <a href="#" className="hover:text-emerald-500 transition">Solusi</a>
-              <a href="#portfolio" className="hover:text-emerald-500 transition">Portfolio</a>
-              <a href="#contact" className="hover:text-emerald-500 transition">Dukungan</a>
-              <a href="#" className="hover:text-emerald-500 transition">Keberlanjutan</a>
+              <Link href="/product" className="hover:text-emerald-500 transition">Product</Link>
+              <Link href="/solution" className="hover:text-emerald-500 transition">Solution</Link>
+              <Link href="#portfolio" className="hover:text-emerald-500 transition">Portfolio</Link>
+              <Link href="#contact" className="hover:text-emerald-500 transition">Support</Link>
             </nav>
             <div className="relative w-full max-w-xs">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
-              <input 
-                type="text" 
-                placeholder="Cari solusi pertanian..." 
+              <input
+                type="text"
+                placeholder="Search..."
                 className="w-full bg-zinc-900 border border-zinc-800 text-sm text-white pl-11 pr-4 py-2.5 rounded-full focus:outline-none focus:border-emerald-500 transition-colors placeholder-zinc-500"
               />
             </div>
@@ -214,10 +214,10 @@ export default function Home() {
       {/* CORPORATE FOOTER (Sesuai image_024bc0.png) */}
       <footer className="bg-zinc-950 text-zinc-400 border-t border-zinc-900 pt-16 pb-8 px-6">
         <div className="max-w-7xl mx-auto">
-          
+
           {/* 4 Kolom Menu Utama */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
-            
+
             {/* Kolom 1 */}
             <div>
               <h4 className="text-white font-bold text-sm mb-4 tracking-wide">Untuk Petani</h4>
