@@ -49,25 +49,25 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             {/* NAV MENU dengan Indikator Aktif */}
             <nav className="hidden lg:flex items-center gap-8 font-medium text-sm">
               <Link 
-                href="/produk" 
+                href="/product" 
                 className={`transition-colors duration-200 relative py-1 ${
-                  isActive("/produk") ? "text-emerald-400 font-semibold" : "text-zinc-400 hover:text-emerald-500"
+                  isActive("/product") ? "text-emerald-400 font-semibold" : "text-zinc-400 hover:text-emerald-500"
                 }`}
               >
-                Produk
-                {isActive("/produk") && (
+                product
+                {isActive("/product") && (
                   <motion.div layoutId="activeUnderline" className="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-500" />
                 )}
               </Link>
 
               <Link 
-                href="/solusi" 
+                href="/solution" 
                 className={`transition-colors duration-200 relative py-1 ${
-                  isActive("/solusi") ? "text-emerald-400 font-semibold" : "text-zinc-400 hover:text-emerald-500"
+                  isActive("/solution") ? "text-emerald-400 font-semibold" : "text-zinc-400 hover:text-emerald-500"
                 }`}
               >
-                Solusi
-                {isActive("/solusi") && (
+                solution
+                {isActive("/solution") && (
                   <motion.div layoutId="activeUnderline" className="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-500" />
                 )}
               </Link>
@@ -88,7 +88,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
               <input 
                 type="text" 
-                placeholder="Cari solusi pertanian..." 
+                placeholder="Cari solution pertanian..." 
                 className="w-full bg-zinc-900 border border-zinc-800 text-sm text-white pl-11 pr-4 py-2.5 rounded-full focus:outline-none focus:border-emerald-500 transition-colors placeholder-zinc-500"
               />
             </div>
@@ -106,7 +106,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             <div>
               <h4 className="text-white font-bold text-sm mb-4 tracking-wide">Untuk Petani</h4>
               <ul className="space-y-2.5 text-sm">
-                <li><Link href="/produk" className="hover:text-emerald-500 transition">Smart Farming</Link></li>
+                <li><Link href="/product" className="hover:text-emerald-500 transition">Smart Farming</Link></li>
                 <li><a href="#" className="hover:text-emerald-500 transition">Monitoring IoT</a></li>
                 <li><a href="#" className="hover:text-emerald-500 transition">Sistem Irigasi</a></li>
                 <li><a href="#" className="hover:text-emerald-500 transition">Promo Mitra</a></li>
@@ -115,7 +115,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             <div>
               <h4 className="text-white font-bold text-sm mb-4 tracking-wide">Untuk Bisnis</h4>
               <ul className="space-y-2.5 text-sm">
-                <li><Link href="/solusi" className="hover:text-emerald-500 transition">Website Agribisnis</Link></li>
+                <li><Link href="/solution" className="hover:text-emerald-500 transition">Website Agribisnis</Link></li>
                 <li><a href="#" className="hover:text-emerald-500 transition">Aplikasi Logistik</a></li>
                 <li><a href="#" className="hover:text-emerald-500 transition">Manajemen Inventori</a></li>
               </ul>
